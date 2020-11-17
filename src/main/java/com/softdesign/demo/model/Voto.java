@@ -16,9 +16,6 @@ public class Voto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(unique = true, length = 100)
-	private String nome;
-
 	@ManyToOne
 	@JoinColumn(name = "id_associado")
 	// @JsonIgnore
@@ -29,7 +26,7 @@ public class Voto {
 	// @JsonIgnore
 	private Sessao sessao;
 	
-	private Integer resultado;
+	private String resultado;
 
 	public Integer getId() {
 		return id;
@@ -37,14 +34,6 @@ public class Voto {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public Associado getAssociado() {
@@ -63,17 +52,16 @@ public class Voto {
 		this.sessao = sessao;
 	}
 
-	public Integer getResultado() {
+	public String getResultado() {
 		return resultado;
 	}
 
-	public void setResultado(Integer resultado) {
+	public void setResultado(String resultado) {
 		this.resultado = resultado;
 	}
 
-	public Voto(Integer id, String nome, Associado associado, Sessao sessao, Integer resultado) {
+	public Voto(Integer id, Associado associado, Sessao sessao, String resultado) {
 		this.id = id;
-		this.nome = nome;
 		this.associado = associado;
 		this.sessao = sessao;
 		this.resultado = resultado;

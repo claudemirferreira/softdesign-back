@@ -21,7 +21,7 @@ public class Sessao {
 
 	@ManyToOne
 	@JoinColumn(name = "id_pauta")
-	//@JsonIgnore
+	// @JsonIgnore
 	private Pauta pauta;
 
 	public Integer getId() {
@@ -49,6 +49,10 @@ public class Sessao {
 	}
 
 	public Sessao() {
+	}
+
+	public Sessao(Integer id) {
+		this.id = id;
 	}
 
 	public Sessao(Integer id, String nome, Pauta pauta) {

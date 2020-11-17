@@ -35,6 +35,10 @@ public class Pauta {
 
 	public Pauta() {
 	}
+	
+	public Pauta(Integer id) {
+		this.id = id;
+	}
 
 	public Pauta(Integer id, String nome) {
 		super();

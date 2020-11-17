@@ -47,6 +47,10 @@ public class Associado {
 	public Associado() {
 	}
 
+	public Associado(Integer id) {
+		this.id = id;
+	}
+
 	public Associado(Integer id, String nome, String cpf) {
 		this.id = id;
 		this.nome = nome;
