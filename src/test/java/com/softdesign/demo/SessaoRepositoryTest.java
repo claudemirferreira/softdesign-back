@@ -16,7 +16,7 @@ class SessaoRepositoryTest {
 
 	@Test
 	void inset() {
-		rep.save(new Sessao(null, "11", new Pauta(1)));
+//		rep.save(new Sessao(null, "11", new Pauta(null, )));
 	}
 
 }
